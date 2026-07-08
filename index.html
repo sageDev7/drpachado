@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="only light">
   <title>Dr. Nahuel Pachado — Abogado · CABA y Buenos Aires</title>
   <meta name="description" content="Dr. Nahuel Alejandro Pachado — Abogado. Derecho de Familia, Civil, Penal, Laboral y más. Matrícula CABA y Provincia de Buenos Aires. Estudio Integral." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,6 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
+    html { color-scheme: only light; }
     :root {
       --navy:      #0d1f35;
       --navy-mid:  #122540;
@@ -79,7 +81,7 @@
     .h-logo-text { font-family: var(--font-title); font-size: 0.92rem; font-weight: 700; font-style: italic; color: var(--white); letter-spacing: 0.04em; white-space: nowrap; }
     .h-logo-text span { display: block; font-size: 0.52rem; font-weight: 400; font-style: normal; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-top: 0.1rem; }
     nav { display: flex; align-items: center; gap: 2.2rem; }
-    nav a { font-family: var(--font-title); font-size: 0.62rem; letter-spacing: 0.18em; color: rgba(255,255,255,0.62); transition: color 0.25s; position: relative; }
+    nav a { font-family: var(--font-title); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.62); transition: color 0.25s; position: relative; }
     nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--grad); transform: scaleX(0); transition: transform 0.3s; }
     nav a:hover { color: var(--gold-lt); }
     nav a:hover::after { transform: scaleX(1); }
@@ -95,15 +97,17 @@
     #hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
     #mobile-nav { position: fixed; top: 0; right: 0; width: 78%; max-width: 300px; height: 100vh; background: var(--navy-mid); border-left: 1px solid var(--border); z-index: 9998; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2.4rem; transform: translateX(100%); transition: transform 0.4s cubic-bezier(.77,0,.175,1); }
     #mobile-nav.open { transform: translateX(0); }
-    #mobile-nav a { font-family: var(--font-title); font-size: 0.78rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.62); transition: color 0.25s; }
+    .mnav-wordmark { font-size: 1.3rem; margin-bottom: 0.6rem; }
+    .mnav-divider { width: 40px; height: 1px; background: var(--grad); margin-bottom: 0.4rem; }
+    #mobile-nav a { font-family: var(--font-title); font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.62); transition: color 0.25s; }
     #mobile-nav a:hover { color: var(--gold-lt); }
     .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.65); z-index: 9997; }
     .nav-overlay.open { display: block; }
 
     /* HERO — centrado, nombre enorme, logo arriba */
     #hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 140px 5% 80px; position: relative; overflow: hidden; }
-    #hero::before { content: ''; position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1800&q=80'); background-size: cover; background-position: center 30%; filter: grayscale(100%); opacity: 0.1; }
-    #hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(13,31,53,0.75) 0%, rgba(13,31,53,0.97) 70%); }
+    #hero::before { content: ''; position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=1800&q=80'); background-size: cover; background-position: center 30%; filter: grayscale(100%); opacity: 0.38; }
+    #hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(13,31,53,0.55) 0%, rgba(13,31,53,0.92) 70%); }
     /* Marco decorativo */
     .hero-frame { position: absolute; inset: 28px; border: 1px solid var(--border-lt); z-index: 1; pointer-events: none; }
     .hero-frame::before, .hero-frame::after { content: ''; position: absolute; width: 32px; height: 32px; border-color: var(--gold); border-style: solid; opacity: 0.5; }
@@ -156,7 +160,7 @@
 
     /* ESTUDIO INTEGRAL */
     #integral { padding: 90px 5%; background: var(--navy); position: relative; overflow: hidden; }
-    #integral::before { content: ''; position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=1800&q=80'); background-size: cover; background-position: center; filter: grayscale(100%); opacity: 0.05; }
+    #integral::before { content: ''; position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=1800&q=80'); background-size: cover; background-position: center; filter: grayscale(100%); opacity: 0.12; }
     .integral-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
     /* Banner horizontal inspirado en el flyer */
     .integral-banner { border: 1px solid var(--border); background: rgba(201,168,76,0.04); padding: 3.5rem 4rem; display: grid; grid-template-columns: auto 1px 1fr 1px 1fr 1px 1fr; gap: 3rem; align-items: center; position: relative; overflow: hidden; }
@@ -199,7 +203,7 @@
 
     /* CONTACTO */
     #contacto { padding: 110px 5%; background: var(--navy-mid); position: relative; overflow: hidden; }
-    #contacto::before { content: ''; position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1800&q=80'); background-size: cover; background-position: center; filter: grayscale(100%); opacity: 0.06; }
+    #contacto::before { content: ''; position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1800&q=80'); background-size: cover; background-position: center; filter: grayscale(100%); opacity: 0.14; }
     .contacto-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1.3fr; gap: 7rem; align-items: start; }
     .contacto-info h2 { font-family: var(--font-title); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 700; letter-spacing: 0.1em; color: var(--white); line-height: 1.1; margin-bottom: 0.3rem; }
     .contacto-info h2 em { font-family: var(--font-serif); font-style: italic; font-size: 0.7em; font-weight: 300; color: var(--gold); display: block; }
@@ -232,7 +236,7 @@
 
     /* MAPA */
     #mapa { height: 380px; }
-    #mapa iframe { width: 100%; height: 100%; border: none; filter: grayscale(100%) brightness(0.6) contrast(1.2); }
+    #mapa iframe { width: 100%; height: 100%; border: none; filter: grayscale(100%); }
 
     /* FOOTER */
     footer { background: var(--navy); padding: 50px 5% 26px; border-top: 1px solid var(--border-lt); position: relative; }
@@ -246,7 +250,7 @@
     .f-social:hover { background: var(--gold); border-color: var(--gold); color: var(--navy); transform: translateY(-2px); }
     .footer-col h4 { font-family: var(--font-title); font-size: 0.58rem; letter-spacing: 0.24em; color: rgba(201,168,76,0.5); margin-bottom: 1.2rem; }
     .footer-col li { margin-bottom: 0.5rem; }
-    .footer-col li a { font-size: 0.82rem; color: rgba(255,255,255,0.28); font-weight: 300; transition: all 0.3s; display: inline-block; }
+    .footer-col li a { font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(255,255,255,0.28); font-weight: 300; transition: all 0.3s; display: inline-block; }
     .footer-col li a:hover { color: var(--gold-lt); transform: translateX(4px); }
     .footer-bottom { border-top: 1px solid rgba(201,168,76,0.08); padding-top: 1.4rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
     .footer-bottom p { font-size: 0.7rem; color: rgba(255,255,255,0.18); }
@@ -341,6 +345,8 @@
 <button id="hamburger" aria-label="Men&uacute;"><span></span><span></span><span></span></button>
 <div class="nav-overlay" id="nav-overlay"></div>
 <nav id="mobile-nav">
+  <div class="h-logo-text mnav-wordmark">Nahuel Pachado</div>
+  <div class="mnav-divider"></div>
   <a href="#areas">&Aacute;REAS</a>
   <a href="#integral">ESTUDIO INTEGRAL</a>
   <a href="#sobre">EL ESTUDIO</a>
