@@ -74,12 +74,12 @@
     #splash.ready .splash-bot-line { width: 160px; }
 
     /* HEADER */
-    header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.4rem 5%; display: flex; align-items: center; justify-content: center; transition: background 0.4s, box-shadow 0.4s; }
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.61rem 5%; display: flex; align-items: center; justify-content: center; transition: background 0.4s, box-shadow 0.4s; }
     header.scrolled { background: rgba(13,31,53,0.97); backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--border-lt); }
     .h-logo { position: absolute; left: 5%; display: flex; align-items: center; opacity: 0; pointer-events: none; transition: opacity 0.4s; }
     header.scrolled .h-logo { opacity: 1; pointer-events: auto; }
-    .h-logo-text { font-family: var(--font-title); font-size: 0.92rem; font-weight: 700; font-style: italic; color: var(--white); letter-spacing: 0.04em; white-space: nowrap; }
-    .h-logo-text span { display: block; font-size: 0.52rem; font-weight: 400; font-style: normal; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-top: 0.1rem; }
+    .h-logo-text { font-family: var(--font-title); font-size: 1.06rem; font-weight: 700; font-style: italic; color: var(--white); letter-spacing: 0.04em; white-space: nowrap; }
+    .h-logo-text span { display: block; font-size: 0.6rem; font-weight: 400; font-style: normal; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-top: 0.1rem; }
     nav { display: flex; align-items: center; gap: 2.2rem; }
     nav a { font-family: var(--font-title); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.62); transition: color 0.25s; position: relative; }
     nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--grad); transform: scaleX(0); transition: transform 0.3s; }
@@ -90,7 +90,7 @@
     .nav-cta::after { display: none !important; }
 
     /* Hamburger */
-    #hamburger { display: none; position: fixed; right: 5%; top: 0; height: calc(1.4rem * 2 + 24px); align-items: center; flex-direction: column; justify-content: center; gap: 5px; cursor: pointer; z-index: 10000; background: none; border: none; padding: 4px; }
+    #hamburger { display: none; position: fixed; right: 5%; top: 0; height: calc(1.61rem * 2 + 24px); align-items: center; flex-direction: column; justify-content: center; gap: 5px; cursor: pointer; z-index: 10000; background: none; border: none; padding: 4px; }
     #hamburger span { display: block; width: 22px; height: 1.5px; background: var(--gold-lt); transition: all 0.32s; transform-origin: center; }
     #hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
     #hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
